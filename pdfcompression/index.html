@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Compressor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>PDF Compressor</h1>
+
+    <div class="upload-box" id="drop-area">
+        <p>Drag & drop your PDF here or click</p>
+        <input type="file" id="upload" accept="application/pdf">
+    </div>
+
+    <div class="controls">
+        <label>Compression Level:</label>
+        <select id="compression-level">
+            <option value="low">Low (Better Quality)</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High (Smaller Size)</option>
+        </select>
+
+        <button id="compress-btn">Compress PDF</button>
+    </div>
+
+    <!-- FIXED: added id -->
+    <div class="status" id="status"></div>
+
+    <div class="result" id="result" style="display:none;">
+        <p id="file-info"></p>
+        <a id="download" href="#" download>Download Compressed PDF</a>
+    </div>
+</div>
+
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
